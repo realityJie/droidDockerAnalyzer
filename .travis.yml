@@ -12,7 +12,7 @@ jobs:
     - stage: test basic tools
       script: 
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer python -V
-        - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer java --version
+        - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer java -version
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer bash -c '$ANDROID_SDK_HOME/platform-tools/adb version'
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer bash -c '$ANDROID_SDK_HOME/build-tools/$ANDROID_SDK_BUILD_TOOLS_VERSION/aapt version'
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer bash -c 'java -jar $ANDROID_APKTOOL_PATH -version'
