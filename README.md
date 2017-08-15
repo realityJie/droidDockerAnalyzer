@@ -1,5 +1,7 @@
 ## Droid Docker Analyzer
 
+![img](https://travis-ci.org/gsgtzq/droidDockerAnalyzer.svg?branch=master)
+
 这是一个包含python、java和apktool的Docker镜像，便于进行安卓包分析和编译反编译等操作。
 
 ### 镜像内容
