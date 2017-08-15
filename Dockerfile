@@ -44,7 +44,6 @@ RUN set -ex \
 ENV PATH $PATH:${ANDROID_SDK_HOME}/platform-tools:${ANDROID_SDK_HOME}/build-tools/${ANDROID_SDK_BUILD_TOOLS_VERSION}
 # android end
 # apktool start
-FROM gsgtzq/py2_java8_android24:latest
 ENV ANDROID_APKTOOL_VERSION 2.2.5-3883e9-SNAPSHOT
 ENV ANDROID_APKTOOL_PATH /opt/android-tools/apktool.jar
 COPY apktool.jar $ANDROID_APKTOOL_PATH
