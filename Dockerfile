@@ -30,7 +30,7 @@ ENV ANDROID_SDK_BUILD_TOOLS_VERSION 24.0.3
 ENV ANDROID_SDK_PLATFORM_VERSION 24
 
 RUN set -ex \
-	apt-get update && apt-get install -y --no-install-recommends \
+	&& apt-get update && apt-get install -y --no-install-recommends \
 		bzip2 \
 		unzip \
 		xz-utils \
