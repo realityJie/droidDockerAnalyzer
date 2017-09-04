@@ -5,5 +5,4 @@ flask \
 flask-sqlalchemy \
 sqlalchemy \
 gunicorn \
-celery \
-&& yes
+celery 
