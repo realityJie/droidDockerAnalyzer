@@ -7,3 +7,4 @@ sqlalchemy \
 gunicorn \
 celery \
 PyMySQL
+
