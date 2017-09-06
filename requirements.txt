@@ -1,0 +1,8 @@
+redis
+requests
+flask
+flask-sqlalchemy
+sqlalchemy
+gunicorn
+celery
+pyOpenSSL

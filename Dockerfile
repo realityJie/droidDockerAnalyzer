@@ -1,10 +1,4 @@
 FROM gsgtzq/droid-docker-analyzer
-RUN pip install redis \
-requests \
-flask \
-flask-sqlalchemy \
-sqlalchemy \
-gunicorn \
-celery \
-PyMySQL
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
