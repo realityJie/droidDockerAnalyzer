@@ -6,3 +6,4 @@ sqlalchemy
 gunicorn
 celery
 pyOpenSSL
+PyMySQL
