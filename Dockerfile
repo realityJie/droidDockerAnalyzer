@@ -38,7 +38,7 @@ RUN set -ex \
     && wget -O android-tools.zip "https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_TOOLS_VERSION}.zip" \
 	&& unzip -qq android-tools.zip -d ${ANDROID_HOME}/ \
 	&& rm android-tools.zip \
-	&& yes | ${ANDROID_SDK_HOME}/tools/bin/sdkmanager --licenses
+	&& yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 # android end
 
 COPY gradle.properties /root/.gradle/gradle.properties
