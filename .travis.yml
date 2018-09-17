@@ -13,4 +13,4 @@ jobs:
       script: 
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer python -V
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer java -version
-        - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer bash -c 'yes | $ANDROID_SDK_HOME/tools/bin/sdkmanager --licenses'
+        - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer bash -c 'yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses'
