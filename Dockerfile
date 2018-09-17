@@ -40,4 +40,6 @@ RUN set -ex \
 	&& rm android-tools.zip 
 # android end
 
+COPY gradle.properties ${HOME}/.gradle 
+
 CMD ["/bin/bash"]
