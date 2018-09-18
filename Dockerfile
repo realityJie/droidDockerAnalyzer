@@ -41,6 +41,9 @@ RUN set -ex \
 	&& yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 # android end
 
-COPY gradle.properties /root/.gradle/gradle.properties
+RUN groupadd -r work && useradd -r -g work work
+USER work
+
+COPY gradle.properties ~/.gradle/gradle.properties
 
 CMD ["/bin/bash"]
