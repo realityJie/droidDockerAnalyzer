@@ -8,7 +8,7 @@ jobs:
         - docker build -t droid-docker-analyzer .
         - docker images
         - docker tag droid-docker-analyzer:1.0 $DOCKER_USERNAME/droid-docker-analyzer
-        - docker push $DOCKER_USERNAME/droid-docker-analyzer
+        - docker push $DOCKER_USERNAME/droid-docker-analyzer:1.0
     - stage: test basic tools
       script: 
         - docker run --rm $DOCKER_USERNAME/droid-docker-analyzer python -V
