@@ -25,7 +25,7 @@ RUN set -x \
 # java8 end
 # android start
 ENV ANDROID_TOOLS_VERSION 3859397
-ENV ANDROID_SDK_HOME /opt/android-sdk
+ENV ANDROID_HOME /opt/android-sdk
 ENV ANDROID_SDK_BUILD_TOOLS_VERSION 27.0.3
 ENV ANDROID_SDK_PLATFORM_VERSION 27
 
@@ -34,12 +34,13 @@ RUN set -ex \
 		bzip2 \
 		unzip \
 		xz-utils \
+		vim \
 	&& rm -rf /var/lib/apt/lists/* \
     && wget -O android-tools.zip "https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_TOOLS_VERSION}.zip" \
-	&& unzip -qq android-tools.zip -d ${ANDROID_SDK_HOME}/ \
+	&& unzip -qq android-tools.zip -d ${ANDROID_HOME}/ \
 	&& rm android-tools.zip \
-	&& yes | ${ANDROID_SDK_HOME}/tools/bin/sdkmanager --licenses \
-	&& ${ANDROID_SDK_HOME}/tools/bin/sdkmanager "build-tools;${ANDROID_SDK_BUILD_TOOLS_VERSION}" "platforms;android-${ANDROID_SDK_PLATFORM_VERSION}" "platform-tools"
+	&& yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses \
+	&& ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;${ANDROID_SDK_BUILD_TOOLS_VERSION}" "platforms;android-${ANDROID_SDK_PLATFORM_VERSION}" "platform-tools"
 
 ENV PATH $PATH:${ANDROID_SDK_HOME}/platform-tools:${ANDROID_SDK_HOME}/build-tools/${ANDROID_SDK_BUILD_TOOLS_VERSION}
 # android end
